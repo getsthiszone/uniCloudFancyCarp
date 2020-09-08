@@ -1,0 +1,53 @@
+.dymlist .dymview {
+	height: 240upx;
+	padding: 35upx 45upx;
+	display: flex;
+	align-items: auto;
+	justify-content: space-between;
+	border-bottom: solid #eeeeee 1upx;
+}
+
+.dymlist .dymview .dymleft {
+	width: 480upx;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 10upx 0upx;
+	
+}
+
+.dymlist .dymview .dymleft .dy-title {
+	font-size: 30upx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 34upx;
+	letter-spacing: 0upx;
+	color: #292929;
+	width: 100%;
+}
+
+.dymlist .dymview .dymleft .dy-subtit {
+	font-size: 27upx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 34upx;
+	letter-spacing: 0upx;
+	color: #7f7f7f;
+	width: 100%;
+} 
+.dymlist .dymview .dymleft .dydoen{
+	display: flex;
+	align-items: center;
+	width: 100%;
+	font-size: 23upx;
+	color: #b5b5b5; 
+}
+.dymlist .dymview .dymleft .dydoen view{
+	margin-right: 30upx;
+}
+
+.dymlist .dymview .dymright .image {
+	width: 169upx;
+	height: 169upx;
+	background-color: #eeeeee;
+	border-radius: 10upx;
+}

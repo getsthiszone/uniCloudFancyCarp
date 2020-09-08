@@ -1,0 +1,118 @@
+.form-group {
+	height: 120upx;
+	display: flex;
+	align-items: center;
+	padding: 0upx 45upx;
+	border-bottom: solid #f7f7f7 1upx;
+}
+
+.form-group .title {
+	width: 200upx;
+	display: flex;
+	align-items: center;
+}
+
+.form-group .title .must {
+	width: 20upx;
+	color: #ff1a1a;
+}
+.form-group .right{
+	display: flex;
+	align-items: center;
+	height: 100upx;
+	flex: 1;
+}
+.form-group .right radio{
+	transform: scale(0.6);
+	margin-right: 15upx;
+}
+.form-group .right input{
+	flex: 1;
+	height: 100%;
+}
+.phclass {
+	font-size: 28rpx;
+	color: #b5b5b5;
+}
+
+
+
+.container .hotel_list {
+	padding-bottom: 124upx;
+	position: relative;
+}
+
+.container .hotel_list .hotel_tr {
+	display: flex;
+	font-size: 28upx;
+	color: #333;
+	font-weight: 500;
+	background-color: #fff;
+	border-bottom: 1upx solid #eee;
+	flex-shrink: 0;
+}
+
+.container .hotel_list .hotel_tr .hotel_th {
+	width: 230upx;
+	flex-shrink: 0;
+	padding: 20upx 0;
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	border-top: 1upx solid #eee;
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #5c7af6;
+}
+
+.container .hotel_list .hotel_tr .hotel_th .van-icon,
+.container .hotel_list .hotel_tr .hotel_th .van-icon:before {
+	display: block !important;
+}
+
+.container .hotel_list .hotel_item .hotel_tr {
+	font-size: 24upx;
+	color: #333;
+}
+
+.container .hotel_list .hotel_item:nth-child(2n) .hotel_td {
+	background: #eee;
+}
+
+.container .hotel_list .hotel_item:nth-child(2n-1) .hotel_td {
+	background: #fff;
+}
+
+.container .hotel_list .hotel_item .hotel_tr .hotel_td {
+	width: 230upx;
+	flex-shrink: 0;
+	padding: 20upx 10upx;
+	text-align: center;
+	box-sizing: border-box;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 71upx;
+}
+
+.container .hotel_list .hotel_item .hotel_tr .hotel_td.money {
+	/* color: #695edd; */
+}
+
+.container .hotel_list .hotel_item .hotel_tr .hotel_td.count {
+	color: #333;
+}
+
+.container .hotel_list .hotel_item .hotel_tr .hotel_td.left {
+	color: #08c47b;
+}
+.container .fixed_left {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0;
+	box-shadow: 2upx 0 6upx -2upx rgba(0, 0, 0, 0.2);
+}

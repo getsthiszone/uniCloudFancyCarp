@@ -1,0 +1,87 @@
+{
+	"pages": [{
+			"path": "pages/tab/index/index",
+			"style": { 
+				"navigationBarTitleText": "优惠券" 
+			}
+		}, {
+			"path": "pages/tab/mine/mine",
+			"style": {
+				"navigationBarBackgroundColor": "#ff8b36",
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "个人中心"
+			}
+		},  {
+			"path": "pages/coupon/list/list",
+			"style": {
+				"navigationBarTitleText": "我的优惠券"
+			}
+		},{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"navigationBarBackgroundColor": "#ff8b36",
+				"navigationBarTextStyle": "white" 
+			}
+		},{
+            "path" : "pages/coupon/info/info",
+            "style" : {
+				"navigationBarTitleText": "优惠券详情"
+			}
+        },{
+            "path" : "pages/serve/binding/binding",
+            "style":{
+				"navigationBarTitleText": "身份验证"
+			}
+        }
+        ,{
+            "path" : "pages/serve/Verifications/Verifications",
+            "style" : {
+				"navigationBarTitleText": "核销记录"
+			}
+        }
+    ],
+	"tabBar": {
+		"color": "#777",
+		"selectedColor": "#ff6c13",
+		"borderStyle": "black",
+		"backgroundColor": "#fff",
+		"list": [{
+				"pagePath": "pages/tab/index/index",
+				"iconPath": "static/tab/coupon.png",
+				"selectedIconPath": "static/tab/coupon_cur.png",
+				"text": "领券中心"
+			}, 
+			{
+				"pagePath": "pages/tab/mine/mine",
+				"iconPath": "static/tab/mine.png",
+				"selectedIconPath": "static/tab/mine_cur.png",
+				"text": "个人中心"
+			}
+		]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "app",
+		"navigationBarBackgroundColor": "#ffffff",
+		"backgroundColor": "#F8F8F8"
+	},
+	"easycom": {
+		"custom": {
+			"u-avatar": "@/uview-ui/components/u-avatar/u-avatar.vue",
+			"u-swiper": "@/uview-ui/components/u-swiper/u-swiper.vue",
+			"u-card": "@/uview-ui/components/u-card/u-card.vue",
+			"u-gap": "@/uview-ui/components/u-gap/u-gap.vue",
+			"u-cell-group": "@/uview-ui/components/u-cell-group/u-cell-group.vue",
+			"u-cell-item": "@/uview-ui/components/u-cell-item/u-cell-item.vue",
+			"u-icon": "@/uview-ui/components/u-icon/u-icon.vue",
+			"u-sticky": "@/uview-ui/components/u-sticky/u-sticky.vue",
+			"u-tabs": "@/uview-ui/components/u-tabs/u-tabs.vue",
+			"u-loading": "@/uview-ui/components/u-loading/u-loading.vue",
+			"u-empty": "@/uview-ui/components/u-empty/u-empty.vue",
+			"u-parse": "@/uview-ui/components/u-parse/u-parse.vue",
+			"u-loadmore": "@/uview-ui/components/u-loadmore/u-loadmore.vue",
+			"u-line": "@/uview-ui/components/u-line/u-line.vue"
+		}
+	}
+}
