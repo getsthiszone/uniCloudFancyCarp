@@ -40,6 +40,22 @@
 				"navigationBarTitleText": "核销记录"
 			}
         }
+        ,{
+            "path" : "pages/adminPort/adminPort",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/adminPort/categories/categories",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/adminPort/categories/list/list",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/adminPort/categories/info/info",
+            "style" : {}
+        }
     ],
 	"tabBar": {
 		"color": "#777",

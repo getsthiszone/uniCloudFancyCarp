@@ -160,8 +160,7 @@
 		},
 		onLoad() {
 			that = this; 
-			that.getlist(); 
-			that.cloudapi.categories.selectAll(); 
+			that.getlist();  
 		},
 		onShow() {
 			let token=uni.getStorageSync("token")

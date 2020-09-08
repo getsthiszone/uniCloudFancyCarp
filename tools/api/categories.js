@@ -43,7 +43,7 @@ api.selectAll = async function(option) {
 				command: db.collection('categories').get()
 			},
 			success(res) {
-				console.log(res);
+				resolve(res.result.data)
 			},
 			fail(err) {
 				console.error(err)
@@ -67,7 +67,7 @@ api.updateCategories = async function(option) {
 					"description": option.description,
 					"create_date": Math.round(new Date())
 				}).where({
-					_id:option._id
+					_id: option._id
 				})
 			},
 			success(res) {
