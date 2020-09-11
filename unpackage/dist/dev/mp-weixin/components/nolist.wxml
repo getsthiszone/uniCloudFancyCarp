@@ -1,0 +1,1 @@
+<view><view class="margin-top" style="height:80%;"><view class="text-center  "><view class="flex justify-center"><image class="icon" style="width:400rpx;height:316rpx;" src="{{imglist[type]}}" mode="widthFix"></image></view><block wx:if="{{text}}"><view class="text-sm text-gray margin-top" style="color:#b9b9b9;">{{text}}</view></block></view></view></view>

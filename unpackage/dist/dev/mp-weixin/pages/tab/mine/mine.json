@@ -1,0 +1,9 @@
+{
+  "navigationBarBackgroundColor": "#ff8b36",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "个人中心",
+  "usingComponents": {
+    "u-avatar": "/uview-ui/components/u-avatar/u-avatar",
+    "u-gap": "/uview-ui/components/u-gap/u-gap"
+  }
+}

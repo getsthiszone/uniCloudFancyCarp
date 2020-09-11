@@ -1,0 +1,14 @@
+.qrcode.data-v-303ff54e {
+  overflow: hidden;
+  position: relative;
+}
+.qrcode .qrcanvas.data-v-303ff54e {
+  position: fixed;
+  top: -9999rpx;
+  left: 9999rpx;
+}
+.qrcode image.data-v-303ff54e {
+  width: 100%;
+  height: 100%;
+}
+

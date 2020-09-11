@@ -1,0 +1,1 @@
+<view class="data-v-6ae234df"><view class="lview data-v-6ae234df"><view class="linkv data-v-6ae234df" style="{{(gstyle)}}"></view><slot></slot><view class="linkv data-v-6ae234df" style="{{(gstyle)}}"></view></view></view>

@@ -14,7 +14,7 @@ api.addcategories = async function(option) {
 					"create_date": Math.round(new Date())
 				})
 			},
-			success(res) {
+			success(res){
 				console.log(res);
 			},
 			fail(err) {

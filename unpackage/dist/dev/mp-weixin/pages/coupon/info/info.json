@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "优惠券详情",
+  "usingComponents": {
+    "u-gap": "/uview-ui/components/u-gap/u-gap",
+    "u-line": "/uview-ui/components/u-line/u-line"
+  }
+}

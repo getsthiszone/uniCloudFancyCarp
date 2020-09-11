@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/tab/index/index",
+    "pages/tab/mine/mine",
+    "pages/coupon/list/list",
+    "pages/login/login",
+    "pages/coupon/info/info",
+    "pages/serve/binding/binding",
+    "pages/serve/Verifications/Verifications",
+    "pages/adminPort/adminPort",
+    "pages/adminPort/categories/categories",
+    "pages/adminPort/categories/list/list",
+    "pages/adminPort/categories/info/info"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "app",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#777",
+    "selectedColor": "#ff6c13",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/tab/index/index",
+        "iconPath": "static/tab/coupon.png",
+        "selectedIconPath": "static/tab/coupon_cur.png",
+        "text": "领券中心"
+      },
+      {
+        "pagePath": "pages/tab/mine/mine",
+        "iconPath": "static/tab/mine.png",
+        "selectedIconPath": "static/tab/mine_cur.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom",
+    "nolist": "/components/nolist",
+    "tabview": "/components/tabview",
+    "shear": "/components/shear",
+    "nomore": "/components/nomore",
+    "send-code": "/components/sendCode",
+    "uni-notice-bar": "/components/notice-bar/uni-notice-bar",
+    "chun-lei-modal": "/components/chunLei-modal/chunLei-modal",
+    "goodslist": "/components/goodslist",
+    "skeleton": "/components/J-skeleton/J-skeleton",
+    "pull-down-view": "/components/pullDownView",
+    "suspension": "/Gcomponents/suspension",
+    "gimage": "/Gcomponents/Gimage/Gimage",
+    "linkview": "/Gcomponents/linkview",
+    "qrcode": "/Gcomponents/qrcode"
+  },
+  "sitemapLocation": "sitemap.json"
+}

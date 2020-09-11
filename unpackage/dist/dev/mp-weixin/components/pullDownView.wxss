@@ -1,0 +1,91 @@
+.public-tabbar.data-v-2ef85487 {
+  height: 50px;
+  overflow: hidden;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  z-index: 1;
+}
+.public-tabbar .scroll-view.data-v-2ef85487 {
+  height: 56px;
+  line-height: 50px;
+  background: #fbfbfb;
+  white-space: nowrap;
+}
+.public-tabbar .scroll-view text.data-v-2ef85487 {
+  padding: 0 30rpx;
+  display: inline-block;
+  height: 48px;
+}
+.public-tabbar .scroll-view text.active.data-v-2ef85487 {
+  color: red;
+  border-bottom: 2px solid red;
+}
+.content.data-v-2ef85487 {
+  position: relative;
+  -webkit-transition: -webkit-transform 300ms ease 0s;
+  transition: -webkit-transform 300ms ease 0s;
+  transition: transform 300ms ease 0s;
+  transition: transform 300ms ease 0s, -webkit-transform 300ms ease 0s;
+  margin-top: -50px;
+}
+.content .down-title.data-v-2ef85487 {
+  width: 100%;
+  text-align: center;
+  color: gray;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  height: 50px;
+}
+.content .down-title .pdimage.data-v-2ef85487 {
+  width: 50rpx;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.content .down-title .release.data-v-2ef85487 {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.content .down-title .pdtext.data-v-2ef85487 {
+  display: inline-block;
+  font-size: 28rpx;
+  vertical-align: middle;
+  margin-left: 16rpx;
+}
+.content .down-title .down-icon.data-v-2ef85487 {
+  display: block;
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 12rpx;
+  -webkit-animation: load-data-v-2ef85487 1.2s cubic-bezier(0.37, 1.08, 0.7, 0.74) infinite;
+          animation: load-data-v-2ef85487 1.2s cubic-bezier(0.37, 1.08, 0.7, 0.74) infinite;
+}
+@-webkit-keyframes load-data-v-2ef85487 {
+0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+}
+100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+}
+}
+.content scroll-view.data-v-2ef85487 {
+  height: 100%;
+}
+.loadingimg.data-v-2ef85487 {
+  -webkit-animation: cuIcon-spin 2s infinite linear;
+          animation: cuIcon-spin 2s infinite linear;
+  font-size: 32rpx;
+}
+

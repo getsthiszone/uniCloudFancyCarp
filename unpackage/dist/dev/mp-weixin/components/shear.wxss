@@ -1,0 +1,116 @@
+
+.cu-modal.bottom-modal.show {
+	margin-bottom: 0;
+}
+.cu-modal.bottom-modal {
+	margin-bottom: -1000rpx;
+}
+.cu-modal.show {
+	opacity: 1;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	overflow-x: hidden;
+	overflow-y: auto;
+	pointer-events: auto;
+}
+.cu-modal {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1110;
+	opacity: 0;
+	outline: 0;
+	text-align: center;
+	-webkit-transform: scale(1.185);
+	transform: scale(1.185);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-perspective: 2000rpx;
+	perspective: 2000rpx;
+	background: rgba(0, 0, 0, 0.6);
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+	pointer-events: none;
+}
+
+/* .cu-modal.bottom-modal: : before {
+	vertical-align: bottom;
+
+}
+
+.cu-modal: : before {
+	content: "\200B";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+
+} */
+.cu-modal.bottom-modal .cu-dialog {
+	width: 100%;
+	-webkit-border-radius: 0;
+	        border-radius: 0;
+}
+.cu-dialog {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: auto;
+	margin-right: auto;
+	width: 680rpx;
+	max-width: 100%;
+	background-color: #f8f8f8;
+	-webkit-border-radius: 10rpx;
+	        border-radius: 10rpx;
+	overflow: hidden;
+}
+.margin-top {
+	margin-top: 30rpx;
+}
+.cu-list.grid.no-border {
+	padding: 20rpx 10rpx;
+}
+.grid {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+.cu-list.grid.no-border .cu-item {
+	padding-top: 10rpx;
+	padding-bottom: 20rpx;
+}
+.grid.col-4  view {
+	width: 25%;
+}
+.cu-list.grid>.cu-item {
+	position: relative;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	padding: 20rpx 0 30rpx;
+	-webkit-transition-duration: 0s;
+	transition-duration: 0s;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+}
+.cu-list>.cu-item {
+	-webkit-transition: all .6s ease-in-out 0s;
+	transition: all .6s ease-in-out 0s;
+	-webkit-transform: translateX(0rpx);
+	transform: translateX(0rpx);
+}
+.bg-white {
+	background-color: #ffffff;
+	color: #666666;
+}
+.text-center {
+	text-align: center;
+}
+

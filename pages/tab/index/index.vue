@@ -1,6 +1,6 @@
 <template>
 	<view class="u-demo">
-
+		<view><button class="cu-btn bg-blue " @tap="upimg">上传</button> </view>
 		<view class="couponlist">
 			<block v-for="(item,index) in list" :key="index">
 				<view class="couponitem">
@@ -25,11 +25,11 @@
 						<button class="cu-btn btn filter" v-if="item.is_have==1" @tap="tpurl" :data-url="'/pages/coupon/info/info?id='+item.id">已领取</button>
 						<button class="cu-btn btn" @tap="save_ticket" :data-index="index" v-else>立即领取</button>
 					</view>
-				</view> 
+				</view>
 			</block>
 		</view>
-		
-		<view class="flex justify-center " v-if="lodstatus=='loading'" style="padding: 30rpx 0rpx;" >
+
+		<view class="flex justify-center " v-if="lodstatus=='loading'" style="padding: 30rpx 0rpx;">
 			<u-loading mode="circle"></u-loading>
 		</view>
 		<view v-if="nolist" style="padding-top: 300rpx;">
@@ -49,7 +49,7 @@
 							<text style="margin-left: 10rpx;">满{{lqinfo.limit_price}}可用</text>
 						</view>
 						<view class="text-center cpuponbtn">
-							<button class="cu-btn allq " @tap="tpinfo" :data-url="'/pages/coupon/info/info?id='+lqinfo.id" >立即使用</button>
+							<button class="cu-btn allq " @tap="tpinfo" :data-url="'/pages/coupon/info/info?id='+lqinfo.id">立即使用</button>
 						</view>
 					</view>
 				</view>
@@ -82,14 +82,14 @@
 				onmore: false,
 				lqinfo: '',
 				printIndex: '',
-				loginStutas:false
+				loginStutas: false
 			}
 		},
 		methods: {
-			tpinfo(e){
+			tpinfo(e) {
 				that.closepop();
 				uni.navigateTo({
-					url:e.currentTarget.dataset.url
+					url: e.currentTarget.dataset.url
 				})
 			},
 			closepop() {
@@ -145,33 +145,37 @@
 					url: that.api.coupons.save_ticket,
 					data: {
 						ticket_id: that.lqinfo.id,
-						Tost:'正在领取'
+						Tost: '正在领取'
 					},
 					success(res) {
 						that.$nextTick(function() {
 							that.$refs.popup.open()
-						}) 
-						that.list[that.printIndex].is_have=1
+						})
+						that.list[that.printIndex].is_have = 1
 						that.$forceUpdate()
 					}
 				})
-
+			},
+			upimg() {
+				that.cloudapi.upfile.upimage().then(res=>{
+					console.log("上传完成：",res)
+				})
 			}
 		},
 		onLoad() {
-			that = this; 
-			that.getlist();  
+			that = this;
+			// that.getlist();   
 		},
 		onShow() {
-			let token=uni.getStorageSync("token")
-			if(token&&!that.loginStutas){
-				that.page=0;
+			let token = uni.getStorageSync("token")
+			if (token && !that.loginStutas) {
+				that.page = 0;
 				that.getlist();
-				that.loginStutas=true
+				that.loginStutas = true
 			}
 		},
 		onReachBottom() {
-			that.getlist(); 
+			that.getlist();
 		}
 	}
 </script>

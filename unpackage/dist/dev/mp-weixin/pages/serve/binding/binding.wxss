@@ -1,0 +1,41 @@
+page {
+  background: #fff !important;
+}
+.form-group {
+  padding: 0rpx;
+}
+.contents {
+  padding: 63rpx;
+}
+.icon {
+  color: #e11b01;
+  font-size: 40rpx;
+  margin-right: 20rpx;
+}
+.form-group .title {
+  width: 140rpx;
+  font-size: 28rpx;
+  color: #a8a8a8;
+}
+.sendCode {
+  font-size: 26rpx;
+  color: #ff5b1a;
+}
+.phclass {
+  color: #2e2e2e;
+}
+.zcolor-btn {
+  width: 613rpx;
+  height: 72rpx;
+  background-color: #ff6c13 !important;
+  -webkit-border-radius: 36rpx;
+          border-radius: 36rpx;
+  margin-top: 123rpx;
+  color: #FFF;
+}
+.yztitle {
+  font-size: 36rpx;
+  color: #000000;
+  margin-bottom: 40rpx;
+}
+

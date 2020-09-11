@@ -55,7 +55,7 @@
         ,{
             "path" : "pages/adminPort/categories/info/info",
             "style" : {}
-        }
+        } 
     ],
 	"tabBar": {
 		"color": "#777",

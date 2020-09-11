@@ -30,7 +30,7 @@
 			}
 			// this.$zax.getConfig();
 			if (uni.getStorageSync("token")) {
-				this.$zax.userinfo();
+				// this.$zax.userinfo();
 			}
 		},
 		onShow: function() {

@@ -1,0 +1,1 @@
+<view class="data-v-303ff54e"><view class="qrcode data-v-303ff54e" style="{{'width:'+(size+'rpx')+';'+('height:'+(size+'rpx')+';')}}"><canvas class="qrcanvas data-v-303ff54e" style="{{'width:'+(size+'px')+';'+('height:'+(size+'px')+';')}}" canvas-id="qrcode"></canvas><block wx:if="{{images}}"><image src="{{images}}" class="data-v-303ff54e"></image></block></view></view>
