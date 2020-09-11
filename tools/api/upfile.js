@@ -5,7 +5,7 @@ var upapi = {};
 
 upapi.upfail = async function(data) {
 	return new Promise(function(resolve, reject) {
-		console.log("上传文件：", data)
+		// console.log("上传文件：", data)
 		//#ifdef H5
 		let filePath = data.path;
 		let lastnum = data.name.lastIndexOf(".");
@@ -19,7 +19,7 @@ upapi.upfail = async function(data) {
 		let failname = Math.round(new Date()) + typetext;
 		//#endif
 
-		console.log("文件名称：", failname)
+		// console.log("文件名称：", failname)
 		// return;
 		uniCloud.uploadFile({
 			filePath: filePath,

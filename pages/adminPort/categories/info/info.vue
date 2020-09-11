@@ -3,7 +3,9 @@
 		<form>
 			<view class="cu-form-group ">
 				<view class="title">头像</view>
-				<view class="cu-avatar radius bg-gray"></view>
+				<view class="cu-avatar radius bg-gray" @tap="upimg">
+					<Gimage :src="info.icon" gstyle="width:64rpx;height:64rpx"></Gimage>
+				</view>
 			</view>
 			<view class="cu-form-group margin-top">
 				<view class="title">分类名称</view>
@@ -15,7 +17,7 @@
 			</view>
 
 			<view class="text-center margin-top">
-				<button class="cu-btn bg-blue lg shadow" style="width: 500rpx;">保存</button>
+				<button class="cu-btn bg-blue lg shadow" @tap="update" style="width: 500rpx;">保存</button>
 			</view>
 		</form>
 	</view>
@@ -28,9 +30,9 @@
 			return {
 				info: {
 					_id: '',
-					"icon": '测试图片',
-					"name": "第一个分类",
-					"description": "测试的分类",
+					"icon": '',
+					"name": "",
+					"description": "",
 				}
 			};
 		},
@@ -43,11 +45,17 @@
 				that.cloudapi.categories.addcategories(that.info).then(res => {
 
 				})
+			},
+			upimg() {
+				that.cloudapi.upfile.upimage().then(res => {
+					console.log("上传完成：", res)
+					that.info.icon=res[0]
+				})
 			}
 		},
 		onLoad(option) {
 			that = this;
-			option.data ? (that.info = JSON.parse(option.data)) : (that.info = {})
+			option.data ? (that.info = JSON.parse(option.data)) : ""
 		}
 	};
 </script>
@@ -57,4 +65,3 @@
 		min-width: calc(4em + 15px);
 	}
 </style>
-le>
