@@ -1,8 +1,8 @@
 <template>
 	<view class="page">
 		<view class="header-view">
-			<view class="header-user"> 
-				<u-avatar :src="userinfo.avatar" @click="tplogo"  size="145" mode="circle"></u-avatar> 
+			<view class="header-user">
+				<u-avatar :src="userinfo.avatar" @click="tplogo" size="145" mode="circle"></u-avatar>
 				<view class="flex flex-direction justify-between" style="margin-left: 15rpx;" v-if="token">
 					<view class="user-name ">{{ userinfo.nickname? userinfo.nickname:'' }}</view>
 				</view>
@@ -65,14 +65,14 @@
 					url: e.currentTarget.dataset.url
 				});
 			},
-			tplogo(){
+			tplogo() {
 				if (!uni.getStorageSync('token')) {
 					uni.navigateTo({
 						url: '/pages/login/login'
 					});
 					return;
 				}
-			},  
+			},
 			scode() {
 				that.$zax.scode(that);
 			},
@@ -81,7 +81,7 @@
 			},
 			getuserinfo() {
 				that.$zax.userinfo().then(res => {
-					that.userinfo = res; 
+					that.userinfo = res;
 				});
 			}
 
@@ -98,11 +98,8 @@
 			if (that.token) {
 				that.getuserinfo();
 			}
-			if (uni.getStorageSync("Verifications")) {
-				that.liveBdList = mine.verList;
-			} else {
-				that.liveBdList = mine.liveBdList;
-			}
+			that.liveBdList = mine.verList;
+
 		}
 	};
 </script>

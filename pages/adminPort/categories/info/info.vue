@@ -4,7 +4,9 @@
 			<view class="cu-form-group ">
 				<view class="title">头像</view>
 				<view class="cu-avatar radius bg-gray" @tap="upimg">
-					<Gimage :src="info.icon" gstyle="width:64rpx;height:64rpx"></Gimage>
+					<view style="width:64rpx;height:64rpx">
+						<Gimage :src="info.icon" v-if="info.icon" gstyle="width:64rpx;height:64rpx"></Gimage>
+					</view>
 				</view>
 			</view>
 			<view class="cu-form-group margin-top">
@@ -17,8 +19,12 @@
 			</view>
 
 			<view class="text-center margin-top">
-				<button class="cu-btn bg-blue lg shadow" @tap="update" style="width: 500rpx;">保存</button>
+				<button class="cu-btn bg-blue lg shadow" @tap="update" style="width: 600rpx;">保存</button>
 			</view>
+			<view class="text-center margin-top">
+				<button class="cu-btn bg-red lg shadow" @tap="deleteone" style="width: 600rpx;">删除</button>
+			</view>
+
 		</form>
 	</view>
 </template>
@@ -39,17 +45,32 @@
 		methods: {
 			getinput(e) {
 				let name = e.currentTarget.dataset.name;
-				that[name] = e.detail.value;
+				that.info[name] = e.detail.value;
 			},
 			update() {
-				that.cloudapi.categories.addcategories(that.info).then(res => {
-
+				that.cloudapi.categories.updateCategories(that.info).then(res => {
+					that.$alertok("保存成功")
+					setTimeout(function() {
+						uni.navigateBack({
+							delta: 1
+						})
+					}, 1000)
+				})
+			},
+			deleteone() {
+				that.cloudapi.categories.deleteCategories(that.info).then(res => {
+					that.$alertok("保存成功")
+					setTimeout(function() {
+						uni.navigateBack({
+							delta: 1
+						})
+					}, 1000)
 				})
 			},
 			upimg() {
 				that.cloudapi.upfile.upimage().then(res => {
 					console.log("上传完成：", res)
-					that.info.icon=res[0]
+					that.info.icon = res[0]
 				})
 			}
 		},

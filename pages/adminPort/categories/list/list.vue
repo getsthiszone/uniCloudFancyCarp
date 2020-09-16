@@ -35,7 +35,9 @@ export default {
 		}
 	},
 	onLoad() {
-		that = this;
+		that = this; 
+	},
+	onShow() {
 		that.getlist();
 	}
 };

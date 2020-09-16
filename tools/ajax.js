@@ -35,9 +35,9 @@ utils.request = function(option) {
 		},
 		success(res) { 
 			if (res.data.code == -1) {
-				uni.navigateTo({
-					url: '/pages/login/login'
-				})
+				// uni.navigateTo({
+				// 	url: '/pages/login/login'
+				// })
 			} else if (res.data.code == 1) {
 				option.success && option.success(res.data.data, res.data)
 			} else {

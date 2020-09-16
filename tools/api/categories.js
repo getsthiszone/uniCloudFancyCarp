@@ -14,7 +14,7 @@ api.addcategories = async function(option) {
 					"create_date": Math.round(new Date())
 				})
 			},
-			success(res){
+			success(res) {
 				console.log(res);
 			},
 			fail(err) {
@@ -61,14 +61,22 @@ api.updateCategories = async function(option) {
 		uniCloud.callFunction({
 			name: 'uni-clientDB',
 			data: {
-				command: db.collection.doc('categories').update({
+				command: db.collection('user').where({
+					_id: option._id
+				}).update({
 					"icon": option.icon,
 					"name": option.name,
 					"description": option.description,
 					"create_date": Math.round(new Date())
-				}).where({
-					_id: option._id
-				})
+				}) 
+				//  db.collection.doc('categories').set({
+				// 	"_id": option._id,
+				// 	"icon": option.icon,
+				// 	"name": option.name,
+				// 	"description": option.description,
+				// 	"create_date": Math.round(new Date())
+				// })
+
 			},
 			success(res) {
 				console.log(res);
@@ -85,4 +93,33 @@ api.updateCategories = async function(option) {
 	})
 }
 
+
+api.deleteCategories = async function(option) {
+	return new Promise(function(resolve, reject) {
+		uniCloud.callFunction({
+			name: 'uni-clientDB',
+			data: {
+				command: db.collection('user').where({
+					_id: option._id
+				}).remove() 
+			},
+			success(res) {
+				console.log(res);
+			},
+			fail(err) {
+				console.error(err)
+				uni.showModal({
+					content: err.message || '云函数请求失败',
+					showCancel: false,
+
+				})
+			}
+		})
+	})
+} 
+
+
 module.exports = api
+
+
+

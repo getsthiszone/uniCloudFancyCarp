@@ -27,15 +27,10 @@
 						}
 					}
 				}
-			}
-			// this.$zax.getConfig();
-			if (uni.getStorageSync("token")) {
-				// this.$zax.userinfo();
-			}
+			} 
 		},
 		onShow: function() {
-			console.log('App Show');
-			console.log(this.$u.config.v);
+			console.log('App Show'); 
 		},
 		onHide: function() {
 			console.log('App Hide');
