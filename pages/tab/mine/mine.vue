@@ -49,18 +49,18 @@
 		methods: {
 			tpinfo(e) {
 				let verify = e.currentTarget.dataset.verify;
-				if (verify) {
-					if (!uni.getStorageSync('token')) {
-						uni.navigateTo({
-							url: '/pages/login/login'
-						});
-						return;
-					} else if (verify == "sendCode") {
-						if (uni.getStorageSync("Verifications")) {
-							that.$zax.scode(that).then(res => {});
-						}
-					}
-				}
+				// if (verify) {
+				// 	if (!uni.getStorageSync('token')) {
+				// 		uni.navigateTo({
+				// 			url: '/pages/login/login'
+				// 		});
+				// 		return;
+				// 	} else if (verify == "sendCode") {
+				// 		if (uni.getStorageSync("Verifications")) {
+				// 			that.$zax.scode(that).then(res => {});
+				// 		}
+				// 	}
+				// }
 				uni.navigateTo({
 					url: e.currentTarget.dataset.url
 				});
@@ -99,7 +99,7 @@
 				that.getuserinfo();
 			}
 			that.liveBdList = mine.verList;
-
+			
 		}
 	};
 </script>
