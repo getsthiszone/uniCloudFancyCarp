@@ -13,7 +13,7 @@ api.login = async function(option) {
 					extra: false
 				}).get()
 			},
-			success(res) { 
+			success(res) {
 				if (res.result.data.length > 0) {
 					resolve(res.result.data[0])
 				} else {
@@ -36,21 +36,19 @@ api.login = async function(option) {
 }
 
 api.getuserlist = function(option) {
-	uniCloud.callFunction({
-		name: 'uni-clientDB',
-		data: {
-			command: db.collection('user').limit(10).get()
-		},
-		success(res) {
-			console.log(res);
-		},
-		fail(err) {
-			console.error(err)
-			uni.showModal({
-				content: err.message || '云函数请求失败',
-				showCancel: false
-			})
-		}
+	  db.collection('uni-id-users').limit(10).get().then(res=>{
+		  console.log()
+	  }).catch(err=>{
+		  
+	  })
+		 
+}
+
+api.adduser = function() {
+	db.collection('uni-id-users').limit(10).get().then(res => {
+		console.log()
+	}).catch(err => {
+
 	})
 }
 

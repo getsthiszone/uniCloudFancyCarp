@@ -173,17 +173,18 @@
 			});
 			//#endif
 			// APPUpdate();
+			that.cloudapi.user.getuserlist()
 		},
 		onShow(){
 			let token = uni.getStorageSync("token")
 			if (token && !that.loginStutas) {
 				that.page = 0;
-				that.getlist();
+				 
 				that.loginStutas = true;
 			}
 		},
 		onReachBottom(){
-			that.getlist();
+			 
 		}
 	}
 </script>
