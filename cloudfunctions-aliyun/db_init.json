@@ -1,167 +1,259 @@
 // 在本文件中可配置云数据库初始化，数据格式见：https://uniapp.dcloud.io/uniCloud/cf-database?id=db_init
 // 编写完毕后对本文件点右键，可按配置规则创建表和添加数据
 {
-	"list": {
-		"data": [{
-				"_id": "1",
-				"name": "吕平",
-				"time": 1105885393581,
-				"title": "电准向你组得则",
-				"content": "置商华器争将热员较次素只南道六济到。角酸至每总各接马音必率安必育影光。这火空需后候省府按业周及据特省。看斗积非作步算才得其日达据。",
-				"extra": "时离技被响支高问级林应写边。"
+	"opendb-news-articles": {
+		"data": [],
+		"index": [{
+			"IndexName": "user_id_",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "user_id",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": false
+			}
+		}, {
+			"IndexName": "create_date_",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "create_date",
+					"Direction": "-1"
+				}],
+				"MgoIsUnique": false
+			}
+		}]
+	},
+	"opendb-news-categories": {},
+	"opendb-news-comments": {
+		"data": [],
+		"index": [{
+			"IndexName": "article_id_",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "article_id",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": false
+			}
+		}, {
+			"IndexName": "user_id_",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "user_id",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": false
+			}
+		}, {
+			"IndexName": "reply_user_id_",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "reply_user_id",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": false
+			}
+		}, {
+			"IndexName": "reply_comment_id_",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "reply_comment_id",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": false
+			}
+		}]
+	},
+	"opendb-news-favorite": {
+		"index": [{
+			"IndexName": "user_article_",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "user_id",
+					"Direction": "1"
+				},{
+					"Name": "article_id",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": true
+			}
+		}, {
+			"IndexName": "user_id_",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "user_id",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": false
+			}
+		}, {
+			"IndexName": "article_id_",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "article_id",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": false
+			}
+		}]
+	},
+	"uni-id-users": {
+		"data": [],
+		"index": [{
+			"IndexName": "username",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "username",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": false
+			}
+		}, {
+			"IndexName": "mobile",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "mobile",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": false
+			}
+		}, {
+			"IndexName": "email",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "email",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": false
+			}
+		}, {
+			"IndexName": "wx_openid.app-plus",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "wx_openid.app-plus",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": false
+			}
+		}, {
+			"IndexName": "wx_openid.mp-weixin",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "wx_openid.mp-weixin",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": false
+			}
+		}, {
+			"IndexName": "wx_unionid",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "wx_unionid",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": false
+			}
+		}, {
+			"IndexName": "ali_openid",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "ali_openid",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": false
+			}
+		}, {
+			"IndexName": "my_invite_code",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "my_invite_code",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": false
+			}
+		}, {
+			"IndexName": "inviter_uid",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "inviter_uid",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": false
+			}
+		}, {
+			"IndexName": "invite_time",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "invite_time",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": false
+			}
+		}]
+	},
+	"uni-verify": {
+		"data": [],
+		"index": [{
+			"IndexName": "mobile",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "mobile",
+					"Direction": "1"
+				}, {
+					"Name": "code",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": false
+			}
+		}, {
+			"IndexName": "email",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "email",
+					"Direction": "1"
+				}, {
+					"Name": "code",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": false
+			}
+		}]
+	},
+	"uni-id-roles": {
+		"data": [],
+		"index": [{
+				"IndexName": "role_id",
+				"MgoKeySchema": {
+					"MgoIndexKeys": [{
+						"Name": "role_id",
+						"Direction": "1"
+					}],
+					"MgoIsUnique": true
+				}
 			},
 			{
-				"_id": "2",
-				"name": "廖艳",
-				"time": 921230993865,
-				"title": "值质当达段除外",
-				"content": "例平及验如集半内花并定委积车团年便。因是划定得半日标构基交命开习金活。此候放发许术重图业产原存参但保花。断白过支节志手表养实了属式小质做。",
-				"extra": "一去龙金温代明千层增事周土权。"
-			},
-			{
-				"_id": "3",
-				"name": "龚勇",
-				"time": 1113117786320,
-				"title": "积五党求类",
-				"content": "华队名并具取因少思类形将规方条林。结路心按了族战名图天特号任对果点。家群看代马属太级己角报六展所里海自万。收约车理常等思保专叫小写。",
-				"extra": "期联她市时次周增极组交提采干候影。"
-			},
-			{
-				"_id": "4",
-				"name": "卢娟",
-				"time": 96248637267,
-				"title": "到小查周且温除",
-				"content": "向起计部放管类场区备些和步们与。该方规需各件家到究后起后正候。候民维见又取角习今大面书段。斯酸般除通外走青入物百数。",
-				"extra": "过系新门拉她决展白种易很大较。"
-			},
-			{
-				"_id": "5",
-				"name": "石娜",
-				"time": 1526908194999,
-				"title": "精分话",
-				"content": "口光先示又市第该计包进达管成水五。气战四布因军商青龙群元却周要。引参也立开况见米准数划图已学反则总。酸际由如走压身这口确按身开至义。",
-				"extra": "着织由价开己众收精具率确活被。"
-			},
-			{
-				"_id": "6",
-				"name": "董涛",
-				"time": 371901802639,
-				"title": "门价整能争",
-				"content": "铁八离选始精确个林正达各百。使下务又还压治件见每南科格信前量劳。研再入于入论太号矿解强活名千色风江。程在战西系效石计院条进上七员长习格量。",
-				"extra": "思着采无于路原正增里并派精报定。"
-			},
-			{
-				"_id": "7",
-				"name": "黄丽",
-				"time": 1221403707735,
-				"title": "容新业叫",
-				"content": "处外断空而十得对却照其还委十。价山果里团向口以你称组器需期持后受。拉准务级头山验国权压比处做。质关没她得工关化近特很低劳设阶。",
-				"extra": "米北每较马海气准称市老风如队律。"
-			},
-			{
-				"_id": "8",
-				"name": "文杰",
-				"time": 959563362680,
-				"title": "声月里",
-				"content": "铁江最马众段指非置情象我指走起两。情应压位般其什地层少约该对二。在解小边思将列准年维体设确斯。事根型国千类问没表响解每多团。",
-				"extra": "加增战等立线交型生电养约来。"
-			},
-			{
-				"_id": "9",
-				"name": "魏秀英",
-				"time": 893082665188,
-				"title": "话把连月",
-				"content": "量身类商代广度家信率东器精派低科接。解观风完变说示几直个劳无走法矿与求数。志养般务从节劳结导需又素金间劳处都。交重走才二连着政片国指水应同值经许。",
-				"extra": "自来治保关文平越温相高决治何下据重高。"
-			},
-			{
-				"_id": "10",
-				"name": "段强",
-				"time": 755583045285,
-				"title": "八界路可来与",
-				"content": "从织快就律原布声如料单备断。置这划半民律关林最运年长阶给。研边后技红千实他化象深包价度。几五做持白图采越级回却石儿意话你接。",
-				"extra": "物商适例需流他强系等决般保。"
-			},
-			{
-				"_id": "11",
-				"name": "邹敏",
-				"time": 904765978257,
-				"title": "展先速毛传",
-				"content": "达起结需果火工高土八或是带商。月称级位被代即期的中利明家商。权装规见事原它听府也率历进义再么。期眼给务工她感把究体己际通。",
-				"extra": "些革比几音名几部片里老果外活。"
-			},
-			{
-				"_id": "12",
-				"name": "梁敏",
-				"time": 1158491265176,
-				"title": "县眼成步声社",
-				"content": "光细质却组前五千位厂件光办体。省车满六具认局层回史切火图气积京。度般好党东物物高按党便集少格路海直。织众派断连名口支给市几治。",
-				"extra": "局众经料外话车华铁发劳机格。"
-			},
-			{
-				"_id": "13",
-				"name": "冯静",
-				"time": 1514099718186,
-				"title": "指器维来情",
-				"content": "得革清因别线知快变积验江总他。设水期题里办什无造毛法代数他车效意。易外装战积改名住花改说影引使加理办看。题易单效名听何支战要达队同声。",
-				"extra": "毛方转备史生身照她决省厂界空着听气过。"
-			},
-			{
-				"_id": "14",
-				"name": "锺杰",
-				"time": 315709031811,
-				"title": "次后速合他水",
-				"content": "证力何压五向大规周家断越能被线何争取。人指还表己切下到矿与式群第。名严土由名专导题并元千治而制基劳传。天即年县但期会无识共法影易至。",
-				"extra": "团具元定习单种然别没示会称外列美解毛。"
-			},
-			{
-				"_id": "15",
-				"name": "文超",
-				"time": 952326548595,
-				"title": "海山装老步划",
-				"content": "电么需明府别加界义大想直象。当整力西车团受总响同说强市其想。规况联安类区使命体心采说正们百。便产方证山局总法己际接场查张这能能。",
-				"extra": "后况名压口资加叫组律动报达最长加该。"
-			},
-			{
-				"_id": "16",
-				"name": "侯杰",
-				"time": 1585235158918,
-				"title": "改而就六",
-				"content": "例约青再物格把龙必越感相属例至八具不。认利便公做收文办进世提广生式立片府。究老电西际称转红红原它白。在水边体做行改龙制边除族经达军上。",
-				"extra": "直命作制理路干比多个委比是和。"
-			},
-			{
-				"_id": "17",
-				"name": "谢洋",
-				"time": 292328474540,
-				"title": "出主月提选外",
-				"content": "今流指活油红局期口效接几经系角。正法强中务头和节家参院院。她先广快具长装派此回号世手千眼导且们。力即听变深酸周性般决此再。",
-				"extra": "究去水看专队进人它队题温识军农去率更。"
-			},
-			{
-				"_id": "18",
-				"name": "毛明",
-				"time": 1377482373048,
-				"title": "电其济省器究参",
-				"content": "持调革矿今往前化先速只调外及。矿叫组己际府打接县叫音美合验本被美红。新进志江实文族色取达广西流北点。斗议确等已万走间任满关光即所委。",
-				"extra": "二争理然连影没路京么立门。"
-			},
-			{
-				"_id": "19",
-				"name": "邵洋",
-				"time": 677248271222,
-				"title": "术商京火程并百",
-				"content": "众点身表信按称已由消书全速线头业。当深机解活构民史次除先话第。阶情间适线平区即体由世思。动等大张计却四府美程器军专二马采。",
-				"extra": "口或于任三五查据龙团写成然到。"
-			},
-			{
-				"_id": "20",
-				"name": "赵磊",
-				"time": 898314771296,
-				"title": "在况色子",
-				"content": "同酸动点此先造省严活种法眼组。京住又两少保程问五每速千。光真青求么叫心问车时实交八么当电。场见保下信造明水照证分分分拉活地。",
-				"extra": "二除复七厂族道了因织提年步效又员。"
-			} 
+				"IndexName": "permission",
+				"MgoKeySchema": {
+					"MgoIndexKeys": [{
+						"Name": "permission",
+						"Direction": "1"
+					}],
+					"MgoIsUnique": false
+				}
+			}
 		]
-	} 
+	},
+	"uni-id-permissions": {
+		"data": [],
+		"index": [{
+			"IndexName": "permission_id",
+			"MgoKeySchema": {
+				"MgoIndexKeys": [{
+					"Name": "permission_id",
+					"Direction": "1"
+				}],
+				"MgoIsUnique": true
+			}
+		}]
+	}
 }

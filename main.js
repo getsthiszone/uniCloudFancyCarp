@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import App from './App'
-import uView from 'uview-ui'; 
-import cloudapi from '@/tools/api/api.js';
+
+import uView from 'uview-ui';
 Vue.use(uView);
-console.log(uView)
+
+import cloudapi from '@/tools/api/api.js';
 
 import config from './config.js'
 Vue.prototype.cloudapi = cloudapi;

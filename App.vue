@@ -23,14 +23,15 @@
 					if (parent_id || user_id) {
 						uni.setStorageSync('parent_id', parent_id ? parent_id : user_id);
 						if (uni.getStorageSync('token')) {
-							this.$zax.bind_parent(parent_id); 
+							this.$zax.bind_parent(parent_id);
 						}
 					}
 				}
 			} 
 		},
 		onShow: function() {
-			console.log('App Show'); 
+			console.log('App Show');
+			// console.log(this.$u.config.v);
 		},
 		onHide: function() {
 			console.log('App Hide');

@@ -1,0 +1,24 @@
+{
+  "name": "uniCloudFancyCarp",
+  "version": "1.0.0",
+  "main": "main.js",
+  "dependencies": {
+    "uview-ui": "^1.7.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/getsthiszone/uniCloudFancyCarp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/getsthiszone/uniCloudFancyCarp/issues"
+  },
+  "homepage": "https://github.com/getsthiszone/uniCloudFancyCarp#readme",
+  "description": ""
+}

@@ -1,6 +1,7 @@
 <template>
 	<view class="u-demo">
 		<view><button class="cu-btn bg-blue " @tap="upimg">上传</button> </view>
+		{{wgtStr}}{{version}}
 		<view class="couponlist">
 			<block v-for="(item,index) in list" :key="index">
 				<view class="couponitem">
@@ -38,7 +39,7 @@
 
 		<u-gap height="20" bg-color="#f2f3f4"></u-gap>
 
-		<uni-popup ref="popup" type="center">
+		<!-- <uni-popup ref="popup" type="center">
 			<view class="jlitem">
 				<view class="jlitembg">
 					<image src="/static/icon/bg-jl.png" mode="widthFix"></image>
@@ -57,21 +58,14 @@
 					<image class="closeimg" @tap="closepop" src="/static/icon/active-close.png" mode="widthFix"></image>
 				</view>
 			</view>
-		</uni-popup>
-
+		</uni-popup> -->
 
 	</view>
 </template>
 
 <script>
-	let that;
-	import {
-		uniPopup
-	} from '@dcloudio/uni-ui'
-	export default {
-		components: {
-			uniPopup
-		},
+	let that; 
+	export default {  
 		data() {
 			return {
 				src: 'http://pic2.sc.chinaz.com/Files/pic/pic9/202002/hpic2119_s.jpg',
@@ -82,7 +76,9 @@
 				onmore: false,
 				lqinfo: '',
 				printIndex: '',
-				loginStutas: false
+				loginStutas: false,
+				wgtStr:'',
+				version:''
 			}
 		},
 		methods: {
@@ -165,6 +161,16 @@
 		onLoad() {
 			that = this;
 			// that.getlist();   
+			//#ifdef APP-PLUS
+			plus.runtime.getProperty(plus.runtime.appid, function(wgtinfo) {
+				let version=wgtinfo.version 
+				that.version=version
+				console.log("app信息",wgtinfo);
+				console.log("版本号",version)
+			});
+			//#endif
+			// APPUpdate();
+			
 		},
 		onShow() {
 			let token = uni.getStorageSync("token")
