@@ -1,5 +1,6 @@
 <template>
 	<view class="page">
+		
 		<view class="header-view">
 			<view class="header-user">
 				<u-avatar :src="userinfo.avatar" @click="tplogo" size="145" mode="circle"></u-avatar>
@@ -11,7 +12,6 @@
 				</view>
 			</view>
 		</view>
-
 
 		<view style="position: relative; ">
 			<view class="cu-list menu shadow-lg radius" style="margin-bottom: 0rpx;">
@@ -50,12 +50,12 @@
 			tpinfo(e) {
 				let verify = e.currentTarget.dataset.verify;
 				// if (verify) {
-				// 	if (!uni.getStorageSync('token')) {
+				// 	if (!uni.getStorageSync('token')){
 				// 		uni.navigateTo({
 				// 			url: '/pages/login/login'
 				// 		});
 				// 		return;
-				// 	} else if (verify == "sendCode") {
+				// 	} else if (verify == "sendCode"){
 				// 		if (uni.getStorageSync("Verifications")) {
 				// 			that.$zax.scode(that).then(res => {});
 				// 		}

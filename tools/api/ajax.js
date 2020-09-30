@@ -13,9 +13,7 @@ utils.request = function(option) {
 		success(res) {
 			if(res.data.length>0){
 				option.success?option.success(res.data):''
-			}else{
-				
-			}
+			}else{}
 		},
 		fail(err) {
 			console.error(err)

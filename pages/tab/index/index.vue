@@ -6,6 +6,7 @@
 			<block v-for="(item,index) in list" :key="index">
 				<view class="couponitem">
 					<view class="coupontop">
+						
 						<view class="flex align-center">
 							<view class="logo">
 								<Gimage :src="item.shop_logo" mode="aspectFill" gstyle="width: 130rpx;height: 130rpx;border-radius:8rpx;"></Gimage>
@@ -59,7 +60,9 @@
 				</view>
 			</view>
 		</uni-popup> -->
-
+		
+		
+		
 	</view>
 </template>
 
@@ -160,27 +163,26 @@
 		},
 		onLoad() {
 			that = this;
-			// that.getlist();   
+			// that.getlist();
 			//#ifdef APP-PLUS
 			plus.runtime.getProperty(plus.runtime.appid, function(wgtinfo) {
-				let version=wgtinfo.version 
+				let version=wgtinfo.version
 				that.version=version
 				console.log("app信息",wgtinfo);
 				console.log("版本号",version)
 			});
 			//#endif
 			// APPUpdate();
-			
 		},
-		onShow() {
+		onShow(){
 			let token = uni.getStorageSync("token")
 			if (token && !that.loginStutas) {
 				that.page = 0;
 				that.getlist();
-				that.loginStutas = true
+				that.loginStutas = true;
 			}
 		},
-		onReachBottom() {
+		onReachBottom(){
 			that.getlist();
 		}
 	}
